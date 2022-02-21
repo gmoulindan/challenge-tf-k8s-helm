@@ -2,7 +2,7 @@
 This project creates a Kubernetes infrastructure with terraform used to deploy 
 an application with helm.
 
-###Challenge Requirements
+### Challenge Requirements
 
 Develop an application, in the language of your choice, that provides an endpoint to check if a number is prime or not. It will be nice for the application to use Redis for caching if you can.
 * Service must be deployed with helm.
@@ -11,7 +11,7 @@ Develop an application, in the language of your choice, that provides an endpoin
 * If you end up using the Redis, it should not be self-hosted. Use the Redis provided by the cloud you pick.
 * Service must be publicly accessible.
 
-###Resources Created:
+### Resources Created:
 
 - VPC
 - 2 Public Subnets
@@ -20,13 +20,13 @@ Develop an application, in the language of your choice, that provides an endpoin
 - EKS Managed Node Group
 - Application that checks if a number is prime
 
-###Validated Resource Versions
+### Validated Resource Versions
 
 - Terraform v0.14.11
 - Helm v3.8.0
 - Docker v20.10.8
 
-##Environment
+## Environment
 
 To create the environment you need to be in the directory `environment`, 
 it was used most of _cloudposse_ modules and a shell scripting to deploy extra addons.
@@ -71,7 +71,7 @@ Changes to Outputs:
   + vpc_cidr                              = "10.100.0.0/16"
   ```
 
-##Application
+## Application
 The application source and config and helm chart is in the directory `applications`. 
 The helm chart is basically created runnig `helm create app-chart`
 with some adaptations regarding service resources to create services of type LoadBalancer
@@ -82,7 +82,7 @@ as it was not mandatory to create a pipeline to it.
 
 To deploy the app you can run `make deploy`
 
-##Final Comments
+## Final Comments
 
 This project was made based in the minimum requirements and has lots of things that the 
 author thinks should be changed, some of them are:
